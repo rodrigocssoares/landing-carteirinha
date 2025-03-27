@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciando o Sistema...</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      text-align: center;
+      padding-top: 80px;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+    }
+    .spinner {
+      margin: 40px auto;
+      border: 6px solid #eee;
+      border-top: 6px solid #00796b;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    a.button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #00796b;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    a.button:hover {
+      background-color: #004d40;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔧 Sistema em inicialização</h1>
+    <p>Estamos iniciando o gerador de carteirinhas.<br> Isso pode levar até <strong>30 segundos</strong>.</p>
+    <div class="spinner"></div>
+    <a class="button" href="https://carteirinha.onrender.com" target="_blank">Acessar o Sistema</a>
+  </div>
+</body>
+</html>

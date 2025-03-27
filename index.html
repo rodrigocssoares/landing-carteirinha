@@ -45,12 +45,27 @@
     #topBar .btn:hover {
       background-color: #004d40;
     }
-    #appIframe {
+    #instructions {
       position: absolute;
       top: 50px;
       left: 0;
       width: 100%;
-      height: calc(100% - 50px);
+      background: #e0f7fa;
+      color: #004d40;
+      padding: 20px;
+      font-size: 14px;
+      box-sizing: border-box;
+      z-index: 999;
+    }
+    #instructions h3 {
+      margin-top: 0;
+    }
+    #appIframe {
+      position: absolute;
+      top: 200px;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 200px);
       border: none;
     }
   </style>
@@ -64,11 +79,25 @@
     <button class="btn" onclick="fecharAviso()">Fechar aviso</button>
   </div>
 
+  <div id="instructions">
+    <h3>📌 Como gerar sua carteirinha virtual</h3>
+    <ul>
+      <li>Localize seu nome com o botão <strong>Selecionar Atleta</strong></li>
+      <li>Somente atletas que participaram de eventos apoiados pela ACSP em 2025 podem gerar carteirinhas</li>
+      <li>Informe seu estado e cidade</li>
+      <li>Escolha uma foto bacana e clique em <strong>Aplicar Corte</strong></li>
+      <li>Visualize o resultado clicando em <strong>Visualizar</strong></li>
+      <li>Você pode mudar a cor do texto ou trocar a foto, depois clique em <strong>Visualizar</strong> novamente</li>
+      <li>Quando estiver satisfeito, clique em <strong>Baixar Carteirinha</strong></li>
+    </ul>
+  </div>
+
   <iframe id="appIframe" src="https://carteirinha-virtual.onrender.com/"></iframe>
 
   <script>
     function fecharAviso() {
       document.getElementById("topBar").style.display = "none";
+      document.getElementById("instructions").style.display = "none";
       document.getElementById("appIframe").style.top = "0";
       document.getElementById("appIframe").style.height = "100%";
     }
